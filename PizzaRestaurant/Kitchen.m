@@ -16,7 +16,8 @@
    Pizza *pizza = [[Pizza alloc] initWithSize:size andToppings:toppings];
         if ([self.delegate kitchen:self shouldMakePizzaOfSize:size andToppings:toppings]) {
             NSLog(@"ShouldMakePizza returned YES");
-            if([self.delegate kitchenShouldUpgradeOrder:self]){
+          
+            if([self.delegate kitchenShouldUpgradeOrder:self]){ //change the pizza to large size if YES
                 pizza.size = large;
                 return pizza;
             }
@@ -24,10 +25,9 @@
             return nil;
         }
     
-    
-    
-    
-    
+    if([self.delegate respondsToSelector:@selector(kitchenDidMakePizza:)]){
+        [self.delegate kitchenDidMakePizza: pizza];
+    }
     return pizza;
 }
 +(Pizza *)largePepperoni{

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		25456B8E227B7375006B0D52 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456B8D227B7375006B0D52 /* Pizza.m */; };
 		25456BA7227BA264006B0D52 /* InputOutputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456BA6227BA264006B0D52 /* InputOutputController.m */; };
+		25456BDD227CCA13006B0D52 /* ManagerThatHateAnchovies.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456BDC227CCA13006B0D52 /* ManagerThatHateAnchovies.m */; };
+		25456BE0227CCD71006B0D52 /* SecondManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456BDF227CCD71006B0D52 /* SecondManager.m */; };
 		6001EC81197B4EC300F97011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6001EC80197B4EC300F97011 /* Foundation.framework */; };
 		6001EC84197B4EC300F97011 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC83197B4EC300F97011 /* main.m */; };
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
@@ -31,6 +33,10 @@
 		25456B8D227B7375006B0D52 /* Pizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
 		25456BA5227BA264006B0D52 /* InputOutputController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputOutputController.h; sourceTree = "<group>"; };
 		25456BA6227BA264006B0D52 /* InputOutputController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputOutputController.m; sourceTree = "<group>"; };
+		25456BDB227CCA13006B0D52 /* ManagerThatHateAnchovies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerThatHateAnchovies.h; sourceTree = "<group>"; };
+		25456BDC227CCA13006B0D52 /* ManagerThatHateAnchovies.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerThatHateAnchovies.m; sourceTree = "<group>"; };
+		25456BDE227CCD71006B0D52 /* SecondManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondManager.h; sourceTree = "<group>"; };
+		25456BDF227CCD71006B0D52 /* SecondManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondManager.m; sourceTree = "<group>"; };
 		6001EC7D197B4EC300F97011 /* PizzaRestaurant */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PizzaRestaurant; sourceTree = BUILT_PRODUCTS_DIR; };
 		6001EC80197B4EC300F97011 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6001EC83197B4EC300F97011 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,6 +88,10 @@
 				6001EC83197B4EC300F97011 /* main.m */,
 				6001EC8E197B502F00F97011 /* Kitchen.h */,
 				6001EC8F197B502F00F97011 /* Kitchen.m */,
+				25456BDB227CCA13006B0D52 /* ManagerThatHateAnchovies.h */,
+				25456BDC227CCA13006B0D52 /* ManagerThatHateAnchovies.m */,
+				25456BDE227CCD71006B0D52 /* SecondManager.h */,
+				25456BDF227CCD71006B0D52 /* SecondManager.m */,
 				25456B8C227B7375006B0D52 /* Pizza.h */,
 				25456B8D227B7375006B0D52 /* Pizza.m */,
 				6001EC85197B4EC300F97011 /* Supporting Files */,
@@ -150,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25456BDD227CCA13006B0D52 /* ManagerThatHateAnchovies.m in Sources */,
+				25456BE0227CCD71006B0D52 /* SecondManager.m in Sources */,
 				25456B8E227B7375006B0D52 /* Pizza.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,

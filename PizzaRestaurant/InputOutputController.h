@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface InputOutputController : NSObject
 +(PizzaSize) convertStringToPizzaSize: (NSString*) size;
++(NSString*) stringFromInput;
++(NSString *)inputForPrompt:(NSString *)promptString;
 @end
 
 NS_ASSUME_NONNULL_END
