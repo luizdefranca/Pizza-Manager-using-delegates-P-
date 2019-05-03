@@ -19,13 +19,15 @@
           
             if([self.delegate kitchenShouldUpgradeOrder:self]){ //change the pizza to large size if YES
                 pizza.size = large;
-                return pizza;
+               
             }
         } else {
             return nil;
         }
     
-    if([self.delegate respondsToSelector:@selector(kitchenDidMakePizza:)]){
+    
+    BOOL respondToSelector = [self.delegate respondsToSelector:@selector(kitchenDidMakePizza:)];
+    if(respondToSelector){
         [self.delegate kitchenDidMakePizza: pizza];
     }
     return pizza;

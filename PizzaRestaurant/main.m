@@ -23,6 +23,8 @@ int main(int argc, const char * argv[])
         NSString *choseManagerMessage = @"Please, chose your manager:\n \"first\" or \"second\" or anything to no manager";
         
         Kitchen *restaurantKitchen = [Kitchen new];
+        ManagerThatHateAnchovies* noAnch;
+        SecondManager* second;
         
         
         while (TRUE) {
@@ -31,10 +33,14 @@ int main(int argc, const char * argv[])
             NSString *managerOption = [InputOutputController inputForPrompt: choseManagerMessage];
             
             if ([managerOption isEqualToString: @"first"]) {
-                ManagerThatHateAnchovies *noAnch = [ManagerThatHateAnchovies new];
+                if (!noAnch) {
+                  noAnch = [ManagerThatHateAnchovies new];
+                }
                 restaurantKitchen.delegate = noAnch;
             }else if ( [managerOption isEqualToString: @"second"]) {
-                SecondManager *second = [SecondManager new];
+                if (!second) {
+                  second = [SecondManager new];
+                }
                 restaurantKitchen.delegate = second;
             }
             
