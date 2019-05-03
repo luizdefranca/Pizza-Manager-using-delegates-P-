@@ -16,7 +16,7 @@
 
 int main(int argc, const char * argv[])
 {
-
+    
     @autoreleasepool {
         
         NSLog(@"Please pick your pizza size and toppings:");
@@ -53,32 +53,35 @@ int main(int argc, const char * argv[])
             Pizza *pizza = [Pizza new];
             // And then send some message to the kitchen...
             if(commandWords.count > 0){
-            
-                if(commandWords.count == 1){
-                    if([commandWords[0] isEqualToString:@"pepperoni"]){
-                        pizza = [Kitchen largePepperoni];
-                  //      NSLog(@"largepepperoni");
-                    }
-                } else if(commandWords.count == 2){
-                    if ([commandWords[0] isEqualToString: @"meatlovers"]) {
-                        PizzaSize size = [InputOutputController convertStringToPizzaSize: commandWords[1]];
-                        pizza = [Kitchen meatLoversWithSize: size];
-                 //       NSLog(@"meatLoversWith");
-                    }
-                } else {
                 
-            
-              NSString * sizeString = [[NSString alloc]initWithString:commandWords[0]];
-                PizzaSize size = [InputOutputController convertStringToPizzaSize:sizeString];
-               NSArray<NSString*>* toppings = [commandWords subarrayWithRange: NSMakeRange(1, commandWords.count  - 1)];
-               pizza = [restaurantKitchen makePizzaWithSize: size toppings:toppings];
-               //     NSLog(@"others");
+                if([commandWords[0] isEqualToString:@"pepperoni" ]){
+                    pizza = [Kitchen largePepperoni];
+                    
+                } else if([commandWords[0] isEqualToString:@"large"]
+                          || [commandWords[0] isEqualToString:@"medium"]
+                          || [commandWords[0] isEqualToString:@"small"]){
+                    
+                    
+                    
+                    if([commandWords[1] isEqualToString: @"meatlovers"]){
+                        
+                        PizzaSize size = [InputOutputController convertStringToPizzaSize: commandWords[0]];
+                        pizza = [Kitchen meatLoversWithSize: size];} else {
+                            
+                            
+                            
+                            NSString * sizeString = [[NSString alloc]initWithString:commandWords[0]];
+                            PizzaSize size = [InputOutputController convertStringToPizzaSize:sizeString];
+                            NSArray<NSString*>* toppings = [commandWords subarrayWithRange: NSMakeRange(1, commandWords.count  - 1)];
+                            pizza = [restaurantKitchen makePizzaWithSize: size toppings:toppings];
+                            //     NSLog(@"others");
+                        }
                 }
             }
-          
+            
             NSLog(@"%@", pizza);
         }
-
+        
     }
     return 0;
 }

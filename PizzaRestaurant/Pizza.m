@@ -16,7 +16,6 @@
         _size = size;
         _toppings = toppings;
     }
-    NSLog(@"%@", self);
     return self;
 }
 

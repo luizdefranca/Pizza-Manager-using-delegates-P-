@@ -25,6 +25,7 @@
 
 //Delegates
 @property (nonatomic, strong) id<KitchenDelegate> delegate;
+
 //Methods
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings;
 

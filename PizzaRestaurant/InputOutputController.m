@@ -11,9 +11,14 @@
 @implementation InputOutputController
 
 + (PizzaSize)convertStringToPizzaSize: (NSString *)size {
-    if ([[size uppercaseString] isEqualToString: @"small"]) return small;
-    if ([[size uppercaseString] isEqualToString: @"medium"]) return medium;
-    if ([[size uppercaseString] isEqualToString: @"large"]) return large;
+    BOOL isSmall = [[size lowercaseString] isEqualToString: @"small"];
+    BOOL isMedium = [[size lowercaseString] isEqualToString: @"medium"];
+    BOOL isLarge = [[size lowercaseString] isEqualToString: @"large"];
+    if (isSmall) return small;
+   
+    if (isMedium) return medium;
+    
+    if (isLarge) return large;
 
     return unknown;
 }
