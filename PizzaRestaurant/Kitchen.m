@@ -12,7 +12,21 @@
 
 
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings {
-    Pizza *pizza = [[Pizza alloc] initWithSize:size andToppings:toppings];
+    
+   Pizza *pizza = [[Pizza alloc] initWithSize:size andToppings:toppings];
+        if ([self.delegate kitchen:self shouldMakePizzaOfSize:size andToppings:toppings]) {
+            NSLog(@"ShouldMakePizza returned YES");
+            if([self.delegate kitchenShouldUpgradeOrder:self]){
+                pizza.size = large;
+                return pizza;
+            }
+        } else {
+            return nil;
+        }
+    
+    
+    
+    
     
     return pizza;
 }

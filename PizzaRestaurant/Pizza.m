@@ -16,8 +16,13 @@
         _size = size;
         _toppings = toppings;
     }
+    NSLog(@"%@", self);
     return self;
 }
 
-
+-(NSString *)description{
+    
+    NSString *desc = [NSString stringWithFormat: @"Pizza - size: @%@\n Toppings: %@", @[@"unknown" ,                                                                    @"small",@"medium", @"large"] [_size], _toppings ];
+    return desc;
+}
 @end

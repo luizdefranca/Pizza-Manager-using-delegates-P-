@@ -10,6 +10,7 @@
 
 #import "Kitchen.h"
 #import "InputOutputController.h"
+#import "Pizza.h"
 
 int main(int argc, const char * argv[])
 {

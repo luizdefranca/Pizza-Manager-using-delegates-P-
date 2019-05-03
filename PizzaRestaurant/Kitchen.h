@@ -9,9 +9,26 @@
 #import <Foundation/Foundation.h>
 #import "Pizza.h"
 
-@interface Kitchen : NSObject
+@class Kitchen;
+@protocol KitchenDelegate <NSObject>
 
+-(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings;
+-(BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen;
+
+//Optional Methods
+@optional
+-(void)kitchenDidMakePizza:(Pizza *)pizza;
+@end
+
+@interface Kitchen : NSObject
+//Properties
+
+//Delegates
+@property (nonatomic, strong) id<KitchenDelegate> delegate;
+//Methods
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings;
+
+//Convenients Methods
 +(Pizza *)largePepperoni;
 +(Pizza *)meatLoversWithSize:(PizzaSize)size;
 @end
